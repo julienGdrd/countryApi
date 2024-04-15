@@ -4,7 +4,7 @@ import { Continent, NewContinentInput } from "../entities/Continent";
 @Resolver(Continent)
 export class ContinentResolver {
     @Query(() => [Continent])
-  async continents(): Promise<Continent[]> {
+  async continents(){
     return Continent.find();
   }
     @Mutation(()=> Continent)

@@ -20,9 +20,9 @@ async function main() {
   const chine = Country.create({ name: "china", code: "CN", emoji: "🇨🇳" });
   const canada = Country.create({ name: "canada", code: "CA", emoji: "🇨🇦" });
 
-  const europe = Continent.create({ name: "europe" });
-  const asie = Continent.create({ name: "asie" });
-  const amerique = Continent.create({ name: "amerique" });
+  const europe = Continent.create({ name: "europe", code: 'EU' });
+  const asie = Continent.create({ name: "asie", code: 'AS' });
+  const amerique = Continent.create({ name: "amerique du nord", code: 'NA' });
 
   france.continent = europe;
   chine.continent = asie;

@@ -13,6 +13,10 @@ export class Continent extends BaseEntity {
     @Field()
     name: string;
 
+    @Column()
+    @Field()
+    code: string;
+
     @OneToMany(()=> Country, (country)=> country.continent)
     countries: Country[]
 }
@@ -21,4 +25,7 @@ export class Continent extends BaseEntity {
 export class NewContinentInput {
     @Field()
     name: string;
+
+    @Field()
+    code: string;
 }

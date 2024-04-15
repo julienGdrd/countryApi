@@ -16,9 +16,9 @@ export class CountryResolver {
 
   @Query(() => [Country])
   async countriesByContinent(
-    @Arg("continentName") continentName: string
+    @Arg("continentCode") continentCode: string
   ){
-    return Country.find({ where: { continent: {name: continentName} } });
+    return Country.find({ where: { continent: {code: continentCode} } });
   }
 
   @Mutation(() => Country)
